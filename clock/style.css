@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Lilita+One&family=Orbitron:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+body .time {
+    font-family: "Jersey 10", serif;
+    letter-spacing: 0.2ch;
+    font-size: 80px;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    background: linear-gradient(45deg, #000000, #832323);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -4px -4px 10px #000000, 4px 4px 4px #832323;
+
+}
+
+main {
+    position: relative;
+    width: 23rem;
+    height: 23rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 10px solid #0d0d22;
+    background: #dadada;
+    box-shadow: inner(40px 4px 4px #000);
+}
+
+main::before {
+    position: absolute;
+    content: "";
+    width: 21rem;
+    height: 21rem;
+    border: 5px double #2e2868;
+    opacity: 0.5;
+    border-radius: 50%;
+}
+
+main .time-number {
+    position: absolute;
+    width: 22rem;
+    height: 22rem;
+    font-family: "Lilita One", serif;
+    font-size: 3rem;
+    font-weight: 900;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+main .time-number>div {
+    position: absolute;
+    width: fit-content;
+    height: 100%;
+}
+
+main .second {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* transition: 1s; */
+}
+
+main .second::before{
+    position: absolute;
+    content: "";
+    width: 15%;
+    height: 15%;
+    background-color: #2b86c5;
+    align-self: center;
+    border-radius: 50%;
+}
+
+main .second>.line {
+    background: linear-gradient(60deg, #ff3cac, #784ba0, #2b86c5);
+    width: 10px;
+    height: 60%;
+}
+
+
+main .min {
+    position: absolute;
+    width: 18rem;
+    height: 18rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    top: 2rem;
+    left: 2rem;
+    /* transition: 60s; */
+}
+
+main .min>.line {
+    background: linear-gradient(60deg, #42e695, #3bb2b8);
+    width: 15px;
+    height: 61%;
+}
+
+main .hr {
+    position: absolute;
+    width: 14rem;
+    height: 14rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    top: 4rem;
+    left: 4rem;
+    /* transition: 360s; */
+
+}
+
+main .hr>.line {
+    background: linear-gradient(60deg, #14142c, #2e2868);
+    width: 20px;
+    height: 64%;
+}
