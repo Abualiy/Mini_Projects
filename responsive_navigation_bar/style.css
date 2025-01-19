@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-family: "Black Ops One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(247, 174, 40);
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    width: 8rem;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+body .nav {
+    width: 100vw;
+    height: 15vh;
+    background-color: rgb(44, 43, 42);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: height .25s ease-in-out;
+}
+
+body .nav.open {
+    height: 60vh;
+}
+
+body .links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+body .links ul {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 1rem;
+    margin-right: 2rem;
+
+}
+
+body .links ul li {
+    position: relative;
+    list-style: none;
+}
+
+body .links ul li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    bottom: -3px;
+    border-bottom: 3px solid rgb(247, 174, 40);
+    transition: .5s;
+}
+
+body .links ul li:hover::before,
+body .links ul li.active::before{
+    width: 100%;
+}
+
+body .hum-menu {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    img {
+        width: 6rem;
+    }
+
+    body .nav {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    body .links ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 20px;
+    }
+
+    body .links ul li {
+        list-style: none;
+    }
+
+    body .hum-menu {
+        display: flex;
+        position: fixed;
+        width: rem;
+        border: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        background: transparent;
+        right: 2rem;
+        top: 2rem;
+    }
+
+    body .hum-menu span {
+        height: 6px;
+        border-radius: 2px;
+        background-color: rgb(247, 174, 40);
+        transition: transform 0.25s ease-in-out;
+    }
+
+    span.top-line,
+    span.bottom-line {
+        width: 1rem;
+        align-self: end;
+    }
+
+    .close span.top-line,
+    .close span.bottom-line {
+        width: 2rem;
+        position: absolute;
+        transform: rotate(-45deg);
+    }
+
+    span.bottom-line {
+        align-self: start;
+        bottom: 0;
+    }
+
+    span.middle-line {
+        width: 2rem;
+    }
+
+    .close span.middle-line {
+        transform: rotate(45deg);
+    }
+}

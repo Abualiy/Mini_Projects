@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .toolbar {
+    width: 95%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 {
+    color: #0a2746;
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  .btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+  }
+
+  button img {
+    width: 20px;
+  }
+
+  button.active {
+    border: 3px solid yellow;
+  }
+
+  button#eraser {
+    background-color: rgb(172, 172, 172);
+  }
+
+  button#clear {
+    background-color: tomato;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #sketchBoard {
+    border: 2px solid #2b2b2b;
+    border-radius: 5px;
+    background-color: white;
+    cursor: crosshair;
+  }
+  
